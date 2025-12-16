@@ -1,14 +1,17 @@
-import React from 'react'
+type greetProp = {
+  name: string;
+  age: number;
+  isLogin: boolean;
+};
 
-type greetProp={
-    name:string
-
-}
-
-function Greet(prop:greetProp) {
+function Greet(prop: greetProp) {
   return (
-    <div>Greet {prop.name}</div>
-  )
+    <>
+      <div>Greet {prop.name}</div>
+      <span>Age : {prop.age}</span>
+      <p>User Login: {prop.isLogin ? "Yes" : "No"}</p>
+    </>
+  );
 }
 
-export default Greet
+export default Greet;
