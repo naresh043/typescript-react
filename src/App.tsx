@@ -1,10 +1,14 @@
 import './App.css'
 import AllHeaddings from './components/AllHeaddings'
+import Button from './components/Button'
+import Container from './components/Container'
 import Greet from './components/Greet'
 import Headding from './components/Headding'
-
+import Input from './components/Input'
 
 function App() {
+
+  
 
 
   const data=[
@@ -24,9 +28,15 @@ function App() {
   return (
     <>
     <Greet name="naresh" age={20} isLogin={true} />
-    ,<AllHeaddings>
+    <AllHeaddings>
       <Headding user={data} />
     </AllHeaddings>
+    <Button handleClick={(e)=>{
+      console.log(e);
+    }}/>
+    <Input handleOnChange={(e)=>console.log(e.target.value)}/>
+   {/* style props  */}
+   <Container style={{border:"2px solid red"}}/>
     </>
   )
 }
