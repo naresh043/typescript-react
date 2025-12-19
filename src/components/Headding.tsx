@@ -1,10 +1,8 @@
 import React from "react";
+import type { Name } from "./headding.type";
 
 type HeaddingProp = {
-  user: {
-    firstName: string;
-    lastName: string;
-  }[];
+  user:Name[];
 };
 
 function Headding(props: HeaddingProp) {
